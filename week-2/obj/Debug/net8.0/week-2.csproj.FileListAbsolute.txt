@@ -1,0 +1,15 @@
+C:\Users\thomp\applied-programming\applied-programming\week-2\bin\Debug\net8.0\week-2.exe
+C:\Users\thomp\applied-programming\applied-programming\week-2\bin\Debug\net8.0\week-2.deps.json
+C:\Users\thomp\applied-programming\applied-programming\week-2\bin\Debug\net8.0\week-2.runtimeconfig.json
+C:\Users\thomp\applied-programming\applied-programming\week-2\bin\Debug\net8.0\week-2.dll
+C:\Users\thomp\applied-programming\applied-programming\week-2\bin\Debug\net8.0\week-2.pdb
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.AssemblyInfoInputs.cache
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.AssemblyInfo.cs
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.csproj.CoreCompileInputs.cache
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.sourcelink.json
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.dll
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\refint\week-2.dll
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.pdb
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\week-2.genruntimeconfig.cache
+C:\Users\thomp\applied-programming\applied-programming\week-2\obj\Debug\net8.0\ref\week-2.dll
