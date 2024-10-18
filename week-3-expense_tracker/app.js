@@ -33,12 +33,12 @@ var ExpenseTracker = /** @class */ (function () {
         this.expenses = this.expenses.filter(function (expense) { return expense.id !== id; });
         this.renderExpenses();
     };
-    // Render expenses to the UI
+    // Render expenses to the conaole
     ExpenseTracker.prototype.renderExpenses = function () {
         var _this = this;
         var expenseList = document.getElementById('expense-list');
         expenseList.innerHTML = ''; // Clear existing list
-        // Add each expense to the list
+        // Add each expense to the list of expenses
         this.expenses.forEach(function (expense) {
             var li = document.createElement('li');
             li.innerText = "".concat(expense.description, ": $").concat(expense.amount.toFixed(2));
@@ -53,7 +53,7 @@ var ExpenseTracker = /** @class */ (function () {
             expenseList.appendChild(li);
         });
     };
-    // Prepare to edit an expense
+    // This  edit the expense
     ExpenseTracker.prototype.editExpense = function (id) {
         var expense = this.expenses.find(function (exp) { return exp.id === id; });
         if (expense) {
@@ -69,7 +69,7 @@ var ExpenseTracker = /** @class */ (function () {
 }());
 // Initialize the expense tracker
 var expenseTracker = new ExpenseTracker();
-// Handle the form submission
+// This Handles the form submission
 document.getElementById('expense-form').onsubmit = function (event) {
     event.preventDefault(); // Prevent the default form submission
     var descriptionInput = document.getElementById('description');
@@ -78,14 +78,14 @@ document.getElementById('expense-form').onsubmit = function (event) {
     var amount = parseFloat(amountInput.value);
     // Check if we are editing an existing expense or adding a new one
     if (expenseTracker.editingId) {
-        // Update the existing expense
+        // Update the existing expense to the console
         expenseTracker.updateExpense(expenseTracker.editingId, description, amount);
     }
     else {
-        // Add a new expense
+        // Add a new expense to the console
         expenseTracker.addExpense(description, amount);
     }
-    // Clear the input fields after submission
+    // This will clear all the inputs after submission
     descriptionInput.value = '';
     amountInput.value = '';
 };
