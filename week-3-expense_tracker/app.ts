@@ -5,13 +5,13 @@ interface Expense {
     amount: number;
 }
 
-// Class to manage expenses
+//This is the class to manage all eexpense
 class ExpenseTracker {
     private expenses: Expense[] = [];
     private nextId: number = 1;
     private editingId: number | null = null; // Track the ID of the expense being edited
 
-    // Method to add a new expense
+    // This is the method to add all expenses
     addExpense(description: string, amount: number): void {
         const newExpense: Expense = {
             id: this.nextId++,
@@ -22,7 +22,7 @@ class ExpenseTracker {
         this.renderExpenses();
     }
 
-    // Method to update an existing expense
+    //  Updates an existing expenses
     updateExpense(id: number, description: string, amount: number): void {
         const expenseIndex = this.expenses.findIndex(expense => expense.id === id);
         if (expenseIndex !== -1) {
@@ -32,23 +32,23 @@ class ExpenseTracker {
         }
     }
 
-    // Method to get all expenses
+    // Get all expenses
     getExpenses(): Expense[] {
         return this.expenses;
     }
 
-    // Method to delete an expense by id
+    // Delete expense by ID
     deleteExpense(id: number): void {
         this.expenses = this.expenses.filter(expense => expense.id !== id);
         this.renderExpenses();
     }
 
-    // Render expenses to the UI
+    // This is the render expenses method
     private renderExpenses(): void {
         const expenseList = document.getElementById('expense-list')!;
         expenseList.innerHTML = ''; // Clear existing list
 
-        // Add each expense to the list
+        // This expenses to the List
         this.expenses.forEach(expense => {
             const li = document.createElement('li');
             li.innerText = `${expense.description}: $${expense.amount.toFixed(2)}`;
@@ -67,14 +67,14 @@ class ExpenseTracker {
         });
     }
 
-    // Prepare to edit an expense
+    // This edits expenses to the console
     private editExpense(id: number): void {
         const expense = this.expenses.find(exp => exp.id === id);
         if (expense) {
             const descriptionInput = document.getElementById('description') as HTMLInputElement;
             const amountInput = document.getElementById('amount') as HTMLInputElement;
 
-            // Fill the input fields with the expense details
+            // This fills the expense details
             descriptionInput.value = expense.description;
             amountInput.value = expense.amount.toString();
             this.editingId = id; // Set the editing ID
@@ -82,10 +82,10 @@ class ExpenseTracker {
     }
 }
 
-// Initialize the expense tracker
+// This initializes the expenses 
 const expenseTracker = new ExpenseTracker();
 
-// Handle the form submission
+// The form submission is handled here
 document.getElementById('expense-form')!.onsubmit = (event) => {
     event.preventDefault(); // Prevent the default form submission
     const descriptionInput = document.getElementById('description') as HTMLInputElement;
@@ -94,16 +94,16 @@ document.getElementById('expense-form')!.onsubmit = (event) => {
     const description = descriptionInput.value;
     const amount = parseFloat(amountInput.value);
 
-    // Check if we are editing an existing expense or adding a new one
+    // This edits and  add, and deletes the expenses
     if (expenseTracker.editingId) {
-        // Update the existing expense
+        // This updates the expenses
         expenseTracker.updateExpense(expenseTracker.editingId, description, amount);
     } else {
-        // Add a new expense
+        // This add the new expenses
         expenseTracker.addExpense(description, amount);
     }
 
-    // Clear the input fields after submission
+    // this clears the inputs after submission
     descriptionInput.value = '';
     amountInput.value = '';
 };

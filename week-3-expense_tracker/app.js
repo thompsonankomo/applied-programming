@@ -1,11 +1,11 @@
-// Class to manage expenses
+// This Class manages the expenses
 var ExpenseTracker = /** @class */ (function () {
     function ExpenseTracker() {
         this.expenses = [];
         this.nextId = 1;
-        this.editingId = null; // Track the ID of the expense being edited
+        this.editingId = null; // This tracks the expense that is being edited
     }
-    // Method to add a new expense
+    // This is the method  adds all expenses
     ExpenseTracker.prototype.addExpense = function (description, amount) {
         var newExpense = {
             id: this.nextId++,
@@ -15,7 +15,7 @@ var ExpenseTracker = /** @class */ (function () {
         this.expenses.push(newExpense);
         this.renderExpenses();
     };
-    // Method to update an existing expense
+    // This updates the existing expenses
     ExpenseTracker.prototype.updateExpense = function (id, description, amount) {
         var expenseIndex = this.expenses.findIndex(function (expense) { return expense.id === id; });
         if (expenseIndex !== -1) {
@@ -24,21 +24,21 @@ var ExpenseTracker = /** @class */ (function () {
             this.renderExpenses(); // Re-render the expenses
         }
     };
-    // Method to get all expenses
+    // This is to get all the expenses in the consoles
     ExpenseTracker.prototype.getExpenses = function () {
         return this.expenses;
     };
-    // Method to delete an expense by id
+    // This deletes expenses by Id
     ExpenseTracker.prototype.deleteExpense = function (id) {
         this.expenses = this.expenses.filter(function (expense) { return expense.id !== id; });
         this.renderExpenses();
     };
-    // Render expenses to the conaole
+    // This method Renders expenses to the console
     ExpenseTracker.prototype.renderExpenses = function () {
         var _this = this;
         var expenseList = document.getElementById('expense-list');
-        expenseList.innerHTML = ''; // Clear existing list
-        // Add each expense to the list of expenses
+        expenseList.innerHTML = ''; // Clear existing list of expenses
+        // each expense is added to the lists to the list of expenses
         this.expenses.forEach(function (expense) {
             var li = document.createElement('li');
             li.innerText = "".concat(expense.description, ": $").concat(expense.amount.toFixed(2));
@@ -53,7 +53,7 @@ var ExpenseTracker = /** @class */ (function () {
             expenseList.appendChild(li);
         });
     };
-    // This  edit the expense
+    // This  edits the expenses to the console
     ExpenseTracker.prototype.editExpense = function (id) {
         var expense = this.expenses.find(function (exp) { return exp.id === id; });
         if (expense) {
@@ -67,25 +67,25 @@ var ExpenseTracker = /** @class */ (function () {
     };
     return ExpenseTracker;
 }());
-// Initialize the expense tracker
+// Initializes the whole expense tracker
 var expenseTracker = new ExpenseTracker();
-// This Handles the form submission
+// This Handles the form submission in the console
 document.getElementById('expense-form').onsubmit = function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
     var descriptionInput = document.getElementById('description');
     var amountInput = document.getElementById('amount');
     var description = descriptionInput.value;
     var amount = parseFloat(amountInput.value);
-    // Check if we are editing an existing expense or adding a new one
+    // Checks if  we are updating an expense or editing an expense
     if (expenseTracker.editingId) {
-        // Update the existing expense to the console
+        // This updates the expense to the console
         expenseTracker.updateExpense(expenseTracker.editingId, description, amount);
     }
     else {
-        // Add a new expense to the console
+        // This add a new expese to the console
         expenseTracker.addExpense(description, amount);
     }
-    // This will clear all the inputs after submission
+    // all inputs are cleared after submission
     descriptionInput.value = '';
     amountInput.value = '';
 };
