@@ -1,8 +1,8 @@
 # Overview
 
-{I am learning the basic functions of the Programming laguage Typescriot to create desktop apps and web apps..}
+I am learning the basic functions of the Programming laguage Typescriot to create desktop apps and web apps..}
 
-{I wrote the Expese tarcker that implements the Software Development principles of CRUD (Create, Read, Update, Delete), I learned about functions, classes, variables and if Statements to come up with this program}
+I wrote the Expese tarcker that implements the Software Development principles of CRUD (Create, Read, Update, Delete), I learned about functions, classes, variables and if Statements to come up with this program}
 
 The purpose of this software is to help everyone to track their expenses on a daily basis. Since the application has a minimalistic view it is also simple to use
 
@@ -13,7 +13,7 @@ The purpose of this software is to help everyone to track their expenses on a da
 # Development Environment
 I used Visual studio Code to edit and come up with the software
 
-{I used typecript language and Javascript with the frontend done in HTML, CSS , javascript and I implemented the react framework}
+I used typecript language and Javascript with the frontend done in HTML, CSS , javascript and I implemented the react framework}
 
 # Useful Websites
 
