@@ -16,7 +16,7 @@ public class App {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
-        // Main menu loop
+        // This is the Main Menu Loop
         do {
             System.out.println("\nMenu for Thomprim Boards Stock Controller:");
             System.out.println("1. Add Stock");
@@ -62,9 +62,9 @@ public class App {
 
     // Method to add a new stock item with quantity and price
     private static void addStock(Scanner scanner) {
-        System.out.print("Enter stock item name: ");
+        System.out.print("Enter the name of the stock item: ");
         String itemName = scanner.nextLine();
-        System.out.print("Enter quantity: ");
+        System.out.print("Enter the quantity: ");
         int quantity = scanner.nextInt();
         System.out.print("Enter price per unit in USD: ");
         double price = scanner.nextDouble();
@@ -90,7 +90,7 @@ public class App {
         }
     }
 
-    // Method to delete a stock item
+    //This  Method is to delete a stock item
     private static void deleteStock(Scanner scanner) {
         System.out.print("Enter stock item name to delete: ");
         String itemName = scanner.nextLine();
@@ -103,7 +103,7 @@ public class App {
         }
     }
 
-    // Method to display all stock items
+    //This  Method  is to display all stock items
     private static void displayStock() {
         System.out.println("\nCurrent Stock:");
         for (Map.Entry<String, StockItem> entry : stock.entrySet()) {

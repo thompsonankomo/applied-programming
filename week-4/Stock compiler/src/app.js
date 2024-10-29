@@ -8,7 +8,7 @@ function toggleFields() {
     const priceField = document.getElementById('priceField');
     const currencyField = document.getElementById('currencyField');
 
-    // Display relevant fields based on action type
+    // this displays the action type
     if (actionType === "add") {
         quantityField.style.display = "block";
         priceField.style.display = "block";
@@ -28,7 +28,7 @@ function toggleFields() {
     }
 }
 
-// Function to handle the selected action
+//  This is the Function to handle the selected action
 function handleAction() {
     const actionType = document.getElementById('actionType').value;
     const itemName = document.getElementById('itemName').value;
@@ -76,13 +76,13 @@ function handleAction() {
     toggleFields();
 }
 
-// Function to add stock
+// Function to add stock to the main stock
 function addStock(itemName, quantity, price) {
     stock[itemName] = { quantity: (stock[itemName]?.quantity || 0) + quantity, price: price };
     alert("Stock added successfully.");
 }
 
-// Function to update stock quantity
+// Function to update stock quantity to the Main Stock
 function updateStock(itemName, quantity) {
     if (stock[itemName]) {
         stock[itemName].quantity = quantity;
@@ -92,7 +92,7 @@ function updateStock(itemName, quantity) {
     }
 }
 
-// Function to delete stock item
+// Function to delete stock item from the Main
 function deleteStock(itemName) {
     if (stock[itemName]) {
         delete stock[itemName];
@@ -102,7 +102,7 @@ function deleteStock(itemName) {
     }
 }
 
-// Function to process a sale
+// Function to process a sale to the POS machine
 function processSale(itemName, quantity, currency) {
     if (stock[itemName] && stock[itemName].quantity >= quantity) {
         const totalCost = (stock[itemName].price * quantity).toFixed(2);
@@ -113,7 +113,7 @@ function processSale(itemName, quantity, currency) {
     }
 }
 
-// Function to display current stock
+// This Function is to display current stock in the Store
 function displayStock() {
     const stockDisplay = document.getElementById('stockDisplay');
     stockDisplay.innerHTML = '';
