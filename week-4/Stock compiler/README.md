@@ -5,7 +5,7 @@ I am building a Stock Controller App for my company, ThomPrim Investments, to tr
 
 The software is written using Java as the backend language, with HTML and CSS for the front-end, creating a web-based user app where stock can be managed and updated. My purpose in writing this software is to develop a  stock management system that not only tracks items sold in real-time but also provides up-to-date inventory for logistical planning and restocking.
 
-Software Demo Video
+Software Demo Video: https://youtu.be/S5xO8LhPc7Y
 
 Development Environment
 For developing this Stock Controller App, I used:
@@ -28,7 +28,7 @@ Here is a list of websites that were helpful throughout the project:
 
 Java Documentation - For understanding Java classes and methods.
 MDN Web Docs - HTML & CSS - For front-end HTML and CSS references and best practices.
-Stack Overflow - For troubleshooting and exploring different coding solutions.
+
 Future Work
 To improve and expand the Stock Controller App, I plan to work on the following:
 
